@@ -1,9 +1,11 @@
 import {Column} from "../../features/Column/Column";
 
+import {Container} from './styled'
+
 export const Main = () => {
  return (
-     <div>
-      im a main page
+     <Container>
+
       <Column />
-     </div>)
+     </Container>)
 }
