@@ -5,8 +5,9 @@ import { Main } from '../screens/Main/Main'
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<Main />} />
+        {/*<Route path='/:id' element={<PostScreen />} />*/}
+        <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

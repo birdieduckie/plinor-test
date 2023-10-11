@@ -1,4 +1,5 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit'
+import {initMetric} from "web-vitals/dist/modules/lib/initMetric";
 
 export interface Card {
     id: string
@@ -16,15 +17,16 @@ export const CARD_SLICE = 'cards'
 
 export const cardSlice = createSlice({
     name: CARD_SLICE,
-    initialState: cardAdapter.getInitialState([] as Card[]),
+    initialState: cardAdapter.getInitialState(),
     reducers: {
-        addCard(state, action) {
+        addCard (state, action)  {
+            console.log(action.payload)
             cardAdapter.setOne(state, action.payload)
         },
-        editCard(state, action) {
+        editCard (state, action) {
             cardAdapter.updateOne(state, action.payload)
         },
-        deleteCard(state, action) {
+        deleteCard (state, action) {
             cardAdapter.removeOne(state, action.payload)
         }
     }

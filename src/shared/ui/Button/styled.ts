@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import { ButtonProps } from './Button'
 
 export const StyledButton = styled.button<ButtonProps>`
+  max-height: 110px;
   min-width: 110px;
   padding: 12px 16px;
   margin: 0 10px 0 0;
